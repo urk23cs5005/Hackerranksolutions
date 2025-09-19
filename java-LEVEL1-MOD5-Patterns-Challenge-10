@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        int row ,col,n;
+        Scanner sc= new Scanner(System.in);
+        n=sc.nextInt();
+        int start = n/2 + (n%2==0?0:1);
+        for(row=1;row<=n;row++){
+        for (col=1;col<=n;col++){
+            if(n%2==0){
+                if (row==start+1 || col==start+1)
+                System.out.print("*");
+            else
+            System.out.print(" ");
+                
+            }
+            else{
+            if (row==start || col==start)
+                System.out.print("*");
+            else
+            System.out.print(" ");
+            }
+            
+        }
+            System.out.println();
+        }
+        
+    }
+}
